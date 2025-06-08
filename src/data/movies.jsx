@@ -177,4 +177,26 @@ const movies = [
   },
 ];
 
+export function MoviesBox(item){
+  return <div className="movie-box">
+                    <img src={item.image} alt="" />
+                    <div className="movie-infomation">
+                      <ul>
+                        <li>Title: <span>{item.title}</span></li>
+                        <li>Year: <span>{item.year}</span></li>
+                        <li>Runtime: <span>{item.runtime}</span></li>
+                        <li className="genres-item">Genres: <ul >{item.genres.map((i) => {
+                                          return <li>{i}</li>
+                                      })}
+                                  </ul></li>
+                        <li>IMDB Rating: <span>{item.imdbRating}</span></li>
+                        <li>IMDB Votes: <span>{item.imdbVotes}</span></li>
+                      </ul>
+                    </div>
+                  </div>
+}
+
+
+
+
 export default movies;
